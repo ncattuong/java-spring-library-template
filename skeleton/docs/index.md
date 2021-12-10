@@ -2,27 +2,27 @@
 
 ${{ values.description }}
 
-## Getting started
+## Getting Started
 
-Start write your documentation by adding more markdown (.md) files to this folder (/docs) or replace the content in this file.
+If you are getting started with Spring Boot, or “Spring” in general, start by reading this section. It answers the basic “what?”, “how?” and “why?” questions. It includes an introduction to Spring Boot, along with installation instructions. We then walk you through building your first Spring Boot application, discussing some core principles as we go.
 
-## Table of Contents
+## 1. Introducing Spring Boot
+Spring Boot helps you to create stand-alone, production-grade Spring-based applications that you can run. We take an opinionated view of the Spring platform and third-party libraries, so that you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
 
-The Table of Contents on the right is generated automatically based on the hierarchy
-of headings. Only use one H1 (`#` in Markdown) per file.
+You can use Spring Boot to create Java applications that can be started by using java -jar or more traditional war deployments. We also provide a command line tool that runs “spring scripts”.
 
-## Site navigation
+Our primary goals are:
 
-For new pages to appear in the left hand navigation you need edit the `mkdocs.yml`
-file in root of your repo. The navigation can also link out to other sites.
+- Provide a radically faster and widely accessible getting-started experience for all Spring development.
 
-Alternatively, if there is no `nav` section in `mkdocs.yml`, a navigation section
-will be created for you. However, you will not be able to use alternate titles for
-pages, or include links to other sites.
+- Be opinionated out of the box but get out of the way quickly as requirements start to diverge from the defaults.
 
-Note that MkDocs uses `mkdocs.yml`, not `mkdocs.yaml`, although both appear to work.
-See also <https://www.mkdocs.org/user-guide/configuration/>.
+- Provide a range of non-functional features that are common to large classes of projects (such as embedded servers, security, metrics, health checks, and externalized configuration).
 
-## Support
+- Absolutely no code generation and no requirement for XML configuration.
 
-That's it. If you need support, reach out in [#docs-like-code](https://discord.com/channels/687207715902193673/714754240933003266) on Discord.
+## 2. System Requirements
+
+Spring Boot 2.6.1 requires Java 8 and is compatible up to and including Java 17. Spring Framework 5.3.13 or above is also required.
+
+Explicit build support is provided for the following build tools:
