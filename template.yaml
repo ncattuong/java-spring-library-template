@@ -1,36 +1,44 @@
 apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
-  name: springboot-template
-  title: Spring Boot gRPC Service
-  description: Create a simple microservice using gRPC and Spring Boot Java
+  name: java-spring-library-template
+  title: Java Spring Library
+  description: Create a simple microservice using Java Spring Library
   tags:
     - recommended
     - java
     - grpc
 spec:
-  owner: service@example.com
+  owner: ngphban
   type: service
   
   parameters:
-    - title: Provide some simple information
+    - title: Project Metadata
       required:
         - component_id
         - owner
         - java_package_name
       properties:
+        group:
+          title: Group
+          type: string
+          description: Unique name of the component
+        artifact:
+          title: Artifact
+          type: string
+          description: Unique name of the component
         component_id:
           title: Name
           type: string
           description: Unique name of the component
-        java_package_name:
-          title: Java Package Name
-          type: string
-          description: Name for the java package. eg (io.backstage.blah)
         description:
           title: Description
           type: string
           description: Help others understand what this website is for.
+        java_package_name:
+          title: Package name
+          type: string
+          description: Name for the java package. eg (io.backstage.blah)
         owner:
           title: Owner
           type: string
@@ -60,9 +68,10 @@ spec:
         copyWithoutRender:
           - .github/workflows/*
         values:
+          group: '{{ parameters.group }}'
           component_id: '{{ parameters.component_id }}'
           description: '{{ parameters.description }}'
-          artifact_id: '{{ parameters.component_id }}'
+          artifact_id: '{{ parameters.artifact }}'
           java_package_name: '{{ parameters.java_package_name }}'
           owner: '{{ parameters.owner }}'
           destination: '{{ parseRepoUrl parameters.repoUrl }}'
