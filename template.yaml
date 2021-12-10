@@ -4,6 +4,8 @@ metadata:
   name: java-spring-library-template
   title: Java Spring Library
   description: Create a simple microservice using Java Spring Library
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   tags:
     - recommended
     - java
