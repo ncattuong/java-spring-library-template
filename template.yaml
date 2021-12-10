@@ -22,23 +22,28 @@ spec:
         group:
           title: Group
           type: string
-          description: Unique name of the component
+          description: Group name of the component
+          default: com.example
         artifact:
           title: Artifact
           type: string
-          description: Unique name of the component
+          description: Artifact name of the component
+          default: demo
         component_id:
           title: Name
           type: string
           description: Unique name of the component
+          default: demo
         description:
           title: Description
           type: string
           description: Help others understand what this website is for.
+          default: Demo project for Spring Boot
         java_package_name:
           title: Package name
           type: string
           description: Name for the java package. eg (io.backstage.blah)
+          default: com.example.demo
         owner:
           title: Owner
           type: string
