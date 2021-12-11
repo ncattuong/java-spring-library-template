@@ -2,7 +2,8 @@ site_name: Java Spring Library
 site_description: Java Spring Library
 
 nav:
-  - Introduction: index.md
+  - 1. Introduction: index.md
+  - 2. System Requirements: system_requirements.md
 
 plugins:
   - techdocs-core
