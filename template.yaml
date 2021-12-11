@@ -82,7 +82,7 @@ spec:
           artifact_id: '{{ parameters.artifact }}'
           java_package_name: '{{parameters.java_package_name | replace(".", "/")}}'
           owner: '{{ parameters.owner }}'
-          destination: '{{ parseRepoUrl parameters.repoUrl }}'
+          destination: '{{ parameters.repoUrl | parseRepoUrl }}'
           http_port: 8080
 
     - id: publish
