@@ -81,7 +81,7 @@ spec:
           artifact_id: ${{ parameters.artifact }}
           java_package_name: ${{parameters.java_package_name | replace(".", "/")}}
           owner: ${{ parameters.owner }}
-          destination: '${{ parameters.repoUrl | parseRepoUrl }}
+          destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
 
     - id: publish
@@ -89,7 +89,7 @@ spec:
       action: publish:github
       input:
         allowedHosts: ['github.com']
-        description: 'This is {{ parameters.component_id }}
+        description: 'This is ${{ parameters.component_id }}'
         repoUrl: ${{ parameters.repoUrl }}
 
     - id: register
