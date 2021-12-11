@@ -67,8 +67,7 @@ spec:
               - github.com
 
   variables:
-    - name: java_package_name
-      value: asdadasdasdasdsa
+    java_package_name: sadsadsasadsad
 
   steps:
     - id: template
