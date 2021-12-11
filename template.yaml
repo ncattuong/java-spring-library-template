@@ -67,7 +67,7 @@ spec:
               - github.com
 
   variables:
-    java_package_name: '{{replace(parameters.java_package_name, '.', '/')}}'
+    java_package_name: $[replace({{ parameters.java_package_name }}, '.', '/')]
   steps:
     - id: template
       name: Fetch Skeleton + Template
