@@ -66,8 +66,9 @@ spec:
             allowedHosts:
               - github.com
 
-  variables:      
-    java_package_name: $[replace("sadasdasd____", '_', '-')]
+  variables:
+    - name: java_package_name
+      value: $[replace("sadasdasd____", '_', '-')]
 
   steps:
     - id: template
