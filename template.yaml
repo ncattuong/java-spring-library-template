@@ -68,7 +68,7 @@ spec:
 
   variables:
     - name: java_package_name
-      value: $[replace("sadasdasd____", '_', '-')]
+      value: asdadasdasdasdsa
 
   steps:
     - id: template
