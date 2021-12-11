@@ -1,4 +1,4 @@
-apiVersion: backstage.io/v1beta2
+apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: java-spring-library-template
@@ -80,7 +80,7 @@ spec:
           component_id: '{{ parameters.component_id }}'
           description: '{{ parameters.description }}'
           artifact_id: '{{ parameters.artifact }}'
-          java_package_name: '{{ replace parameters.java_package_name "." "/" }}'
+          java_package_name: '{{parameters.java_package_name | replace(".", "/")}}'
           owner: '{{ parameters.owner }}'
           destination: '{{ parseRepoUrl parameters.repoUrl }}'
           http_port: 8080
