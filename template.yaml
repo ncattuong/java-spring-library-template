@@ -79,7 +79,8 @@ spec:
           component_id: ${{ parameters.component_id }}
           description: ${{ parameters.description }}
           artifact_id: ${{ parameters.artifact }}
-          java_package_name: ${{parameters.java_package_name | replace(".", "/")}}
+          java_package_name_path: ${{parameters.java_package_name | replace(".", "/")}}
+          java_package_name: ${{parameters.java_package_name}}
           owner: ${{ parameters.owner }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
