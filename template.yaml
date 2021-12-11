@@ -67,7 +67,7 @@ spec:
               - github.com
 
   variables:      
-    java_package_name: $[replace(parameters['java_package_name'], '_', '-')]
+    java_package_name: $[replace("sadasdasd____", '_', '-')]
 
   steps:
     - id: template
